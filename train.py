@@ -104,9 +104,6 @@ def train_autoencoder(model, train_loader, val_loader=None, num_epochs=100,
         'history': history
     }, os.path.join(save_dir, 'final_model.pth'))
 
-    with open(os.path.join(save_dir, 'training_history.json'), 'w') as f:
-        json.dump(history, f, indent=2)
-
     return history
 
 
